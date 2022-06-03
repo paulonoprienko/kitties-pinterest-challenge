@@ -1,0 +1,10 @@
+<section class="viewing-kitties fav-page">
+    <div class="wrapper">
+        <div class="viewing-kitties__gallery">
+            <div class="viewing-kitties__item" *ngFor="let kitty of kitties">
+                <img [src]="kitty.url" alt="kitty" class="viewing-kitties__item-pic">
+                <button class="viewing-kitties-fav" (click)="toRemove(kitty)"></button>
+            </div>
+        </div>
+    </div>
+</section>

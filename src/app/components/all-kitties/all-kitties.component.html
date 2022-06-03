@@ -1,0 +1,11 @@
+<section class="viewing-kitties">
+    <div class="wrapper">
+        <div class="viewing-kitties__gallery">
+            <div class="viewing-kitties__item" *ngFor="let kittyView of kittiesView">
+                <img [src]="kittyView.kitty.url" [alt]="kittyView.kitty.id" class="viewing-kitties__item-pic">
+                <button class="viewing-kitties-fav" [ngClass]="{chosen: kittyView.isFavorite}" (click)="toggleLike(kittyView)"></button>
+            </div>
+        </div>
+    </div>
+</section>
+<div #anchor></div>
