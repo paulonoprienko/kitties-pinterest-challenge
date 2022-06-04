@@ -12,7 +12,7 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   getKitties(): Observable<Kitty[]> {
-    return this.http.get<Kitty[]>('https://api.thecatapi.com/v1/images/search?size=small&limit=5')
+    return this.http.get<Kitty[]>('https://api.thecatapi.com/v1/images/search?size=small&limit=15')
     .pipe(
       map(response => {
         return response.map(el => ({
